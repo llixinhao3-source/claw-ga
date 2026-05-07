@@ -10,6 +10,17 @@
 - 🖱️ **拖拽移动** - 左键点击拖拽移动宠物位置
 - 📦 **收缩模式** - 双击宠物隐藏/显示聊天框
 
+## 预览图
+
+### 精灵帧图
+![Anim Frame](images/anim_frame.png)
+
+### 走路帧图
+![Walk Frame](images/walk_frame.png)
+
+### 精灵图集
+![Pet Atlas](images/pet_atlas.png)
+
 ## 项目结构
 
 ```
@@ -25,6 +36,7 @@ claw-ga/
 │   ├── slide/
 │   ├── work_sleep/
 │   └── jump/
+├── images/               # 预览图片
 └── GenericAgent/         # AI 对话引擎
 ```
 
@@ -44,7 +56,8 @@ python pet_clean.py
 - PyQt6
 - requests
 
-## 预览
+## 使用说明
 
-宠物会在桌面显示，支持对话交互。
-双击收缩/展开聊天面板，左键拖拽移动位置。
+- **移动宠物**：左键点击并拖拽
+- **收缩/展开**：双击宠物切换聊天面板显示
+- **发送消息**：在底部输入框输入内容，AI 会自动回复
