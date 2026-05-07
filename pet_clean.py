@@ -6,7 +6,7 @@ from PyQt6.QtCore import Qt, QTimer, QPoint, QThread, pyqtSignal
 from PyQt6.QtGui import QPixmap, QPainter
 
 PET_ROOT = Path.home() / "Desktop" / "ip" / "sprites_yoffset3"
-GA_DIR = Path.home() / "Desktop" / "ip" / "GenericAgent"
+GA_DIR = Path(__file__).parent / "GenericAgent"
 FRAME_SIZE = 100
 
 STATE_CONFIG = {

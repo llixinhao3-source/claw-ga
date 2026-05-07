@@ -18,35 +18,40 @@
 ### 走路帧图
 ![Walk Frame](images/walk_frame.png)
 
-### 精灵图集
-![Pet Atlas](images/pet_atlas.png)
-
 ## 项目结构
 
 ```
 claw-ga/
 ├── pet_clean.py          # 主程序
-├── cut_sprites.py        # 精灵图裁剪工具
+├── GenericAgent/         # AI 对话引擎（需要单独配置）
 ├── sprites_yoffset3/     # 像素精灵图
-│   ├── idle_front/
-│   ├── walk_front/
-│   ├── walk_left/
-│   ├── walk_right/
-│   ├── run/
-│   ├── slide/
-│   ├── work_sleep/
-│   └── jump/
 ├── images/               # 预览图片
-└── GenericAgent/         # AI 对话引擎
+└── README.md
 ```
 
-## 运行方式
+## 快速开始
+
+### 1. 安装依赖
 
 ```bash
-# 安装依赖
 pip install PyQt6 requests
+```
 
-# 运行宠物
+### 2. 配置 GenericAgent
+
+GenericAgent 需要配置 API Key：
+
+```bash
+# 创建配置文件
+cp GenericAgent/mykey_template.py GenericAgent/mykey.py
+
+# 编辑 mykey.py，填入你的 API Key
+# MINIMAX_API_KEY = "your-key-here"
+```
+
+### 3. 运行宠物
+
+```bash
 python pet_clean.py
 ```
 
@@ -61,3 +66,9 @@ python pet_clean.py
 - **移动宠物**：左键点击并拖拽
 - **收缩/展开**：双击宠物切换聊天面板显示
 - **发送消息**：在底部输入框输入内容，AI 会自动回复
+
+## 自定义精灵图
+
+如需替换宠物外观，替换 `sprites_yoffset3/` 目录下的精灵图即可。
+
+每个动作目录包含 8 帧 PNG 图片，尺寸建议 100x100 像素。
